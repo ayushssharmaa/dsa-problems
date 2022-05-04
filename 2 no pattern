@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int count = 1, i, n;
+    cin>>n;
+    for(i=1;i<n;i++){
+        cout<<count<<" ";
+        count++;
+        cout<<count<<"\n";
+        count++;
+    }
+	return 0;
+}
