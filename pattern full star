@@ -28,7 +28,7 @@ int main() {
 	    for(k=n-1; k>i; k--){
 	        cout<<"*";
 	    }
-	    for(l=n; l>=i+3; l--){
+	    for(l=n-3; l>=i; l--){
 	        cout<<"*";
 	    }
 	    cout<<"\n";
