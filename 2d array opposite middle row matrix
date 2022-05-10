@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int count=1, i, j, n;
+	
+	cin>>n;
+	int a[n][n];
+	
+	for(i=0; i<n; i++){
+	    if(i%2==0){
+	        for(j=0; j<n; j++){
+	            a[i][j]=count;
+	            count++;
+	            cout<<a[i][j];
+	        }
+	    }
+	    else{
+	        for(j=n-1; j>=0; j--){
+	            a[i][j]=count;
+	            count++;
+	            cout<<a[i][j];
+	        }
+	    }
+	    cout<<"\n";
+	}
+	
+	return 0;
+}
