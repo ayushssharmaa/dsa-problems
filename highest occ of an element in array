@@ -1,0 +1,47 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	
+	
+	int i,j,k,n;
+	cin>>n;
+	int a[n];
+	
+	for(i=0; i<n; i++){
+	    cin>>a[i];
+	}
+	  int max=0;
+	  for(i=0;i<n;i++)
+    {
+        if(max<a[i])
+        {
+            max=a[i];
+        }
+    }
+    cout<<max<<endl;
+
+	
+   
+    int hash[max+1]={0};
+    for(i=0;i<n;i++)
+    {
+        hash[a[i]]++;
+    }
+    int max1=0;
+    	for(i=0; i<max+1; i++){
+	    if(max1<hash[i])
+        {
+            max1=hash[i];
+             j=i;
+        }
+	}
+  
+    cout<<"Element "<<j<<"has max occ of "<<max1;
+  
+    
+    
+	
+	
+// 	return 0;
+}
