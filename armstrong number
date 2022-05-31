@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	
+	int r, s=0, n, temp;
+	cin>>n;
+	temp=n;
+	
+	while(n>0) {
+	    r=n%10;
+	    s=s+r*r*r;  // MULTIPLICATION OF R MUST BE EQUAL TO LENGTH OF N
+	    n=n/10;
+	}
+    if(s==temp) cout<<"Number is arms";
+    else cout<<"Number is not a arms";
+	return 0;
+}
