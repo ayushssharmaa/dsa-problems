@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int a=1,b=0,c=0;
+    
+    while(c<35){
+        c=a+b;
+        cout<<c<<" ";
+        a=b;
+        b=c;
+    }
+    
+	return 0;
+}
