@@ -1,0 +1,39 @@
+
+// Basic of functions
+
+#include <iostream>
+using namespace std;
+
+
+int add(int x,int y){
+    return x+y;
+}
+
+int sub(int x,int y){
+    return x-y;
+}
+
+int mul(int x,int y){
+    return x*y;
+}
+
+int divi(int x,int y){
+    return x/y;
+}
+
+
+int main() {
+    
+    int a,b;
+    cin>>a>>b;
+    
+    cout<<add(a,b)<<"\n";
+    
+    cout<<sub(a,b)<<"\n";
+    
+    cout<<mul(a,b)<<"\n";
+    
+    cout<<divi(a,b);
+    
+	return 0;
+}
