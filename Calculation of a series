@@ -1,0 +1,22 @@
+
+// Calculation of a series (1/2! + 2/3! + 3/4! + .....)
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    float i,j,s=0,fact=1,n;
+    cin>>n;
+    
+    for(i=1; i<=n; i++){
+        fact=1;
+        for(j=1; j<=i+i; j++){
+            fact=fact*j;
+        }
+        s=s+i/fact;
+    }
+    cout<<s;
+    
+	return 0;
+}
