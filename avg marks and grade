@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int rollno, phy, chem, maths, total;
+    float avg;
+    cin>>rollno>>phy>>chem>>maths;
+    
+    cout<<"Roll Number is "<<rollno<<endl;
+    cout<<"Physics marks "<<phy<<endl;
+    cout<<"Chemistry marks "<<chem<<endl;
+    cout<<"Maths marks "<<maths<<endl;
+    
+    total=phy+chem+maths;
+    cout<<"Total is "<<total<<endl;
+    
+    avg=total/3;
+    cout<<"Average is "<<avg<<endl;
+    
+    if(avg>=60) cout<<"Student has got A grade";
+    else if((avg<=50) && (avg>60)) cout<<"Student has got B grade";
+    else if((avg<=40) && (avg>50)) cout<<"Student has got C grade";
+    else if(avg<40) cout<<"Student is fail";
+
+	return 0;
+}
