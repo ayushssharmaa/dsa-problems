@@ -10,39 +10,39 @@ int main() {
     {
         if(b>=c)
         {
-            cout<<"Ascending order is "<<a<<b<<c<<endl;
-            cout<<"Decending order is "<<c<<b<<a<<endl;
+            cout<<"Descending order is "<<a<<" "<<b<<" "<<c<<endl;
+            cout<<"Ascending order is "<<c<<" "<<b<<" "<<a<<endl;
         }
         else if(b<=c)
         {
-            cout<<"Ascending order is "<<a<<c<<b<<endl;
-            cout<<"Decending order is "<<b<<c<<a<<endl;
+            cout<<"Descending order is "<<a<<" "<<c<<" "<<b<<endl;
+            cout<<"Ascending order is "<<b<<" "<<c<<" "<<a<<endl;
         }
     }
     else if((b>=a) && (b>=c))
     {
         if(a>=c) 
         {
-            cout<<"Ascending order is "<<b<<a<<c<<endl;
-            cout<<"Decending order is "<<c<<b<<a<<endl;
+            cout<<"Descending order is "<<b<<" "<<a<<" "<<c<<endl;
+            cout<<"Ascending order is "<<c<<" "<<a<<" "<<b<<endl;
         }
         else if(a<=c) 
         {
-            cout<<"Ascending order is "<<b<<c<<a<<endl;
-            cout<<"Decending order is "<<a<<c<<b<<endl;
+            cout<<"Descending order is "<<b<<" "<<c<<" "<<a<<endl;
+            cout<<"Ascending order is "<<a<<" "<<c<<" "<<b<<endl;
         }
     }
      else if((c>=a) && (c>=b))
     {
         if(a>=b) 
         {
-            cout<<"Ascending order is "<<c<<a<<b<<endl;
-            cout<<"Decending order is "<<c<<b<<a<<endl;
+            cout<<"Descending order is "<<c<<" "<<a<<" "<<b<<endl;
+            cout<<"Ascending order is "<<b<<" "<<a<<" "<<c<<endl;
         }
         else if(a<=b) 
         {
-            cout<<"Ascending order is "<<c<<a<<b<<endl;
-            cout<<"Decending order is "<<b<<a<<c<<endl;
+            cout<<"Descending order is "<<c<<" "<<b<<" "<<a<<endl;
+            cout<<"Ascending order is "<<a<<" "<<b<<" "<<c<<endl;
             
         }
     }
