@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int x,r1,r2,a,b,c;
+    cin>>a>>b>>c;
+    
+    x=b*b-4*a*c;
+    r1=(-b+x)/2*a;
+    r2=(-b-x)/2*a;
+    
+    if(x>0) cout<<"Roots are real"<<endl;
+    else if(x<0) cout<<"Roots are unreal"<<endl;
+    else cout<<"Roots are equal"<<endl;
+    
+    cout<<"r1= "<<r1<<endl<<"r2= "<<r2;
+
+	return 0;
+}
