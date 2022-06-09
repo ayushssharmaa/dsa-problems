@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int add(int x, int y){
+    return(x+y);
+}
+int sub(int x, int y){
+    return x-y;
+}
+int mul(int x, int y){
+    return(x*y);
+}
+int divi(int x, int y){
+    return(x/y);
+}
+
+int main() {
+
+    int a,b;
+    cin>>a>>b;
+    int val1=add(a,b);
+    cout<<val1<<endl;
+    int val2=sub(a,b);
+    cout<<val2<<endl;
+    int val3=mul(a,b);
+    cout<<val3<<endl;
+    int val4=divi(a,b);
+    cout<<val4;
+
+	return 0;
+}
