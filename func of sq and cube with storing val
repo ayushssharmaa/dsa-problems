@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int sq(int n)
+{
+    return(n*n);
+}
+int cube(int n)
+{
+    return(n*n*n);
+}
+
+
+int main() {
+
+    int a;
+    cin>>a;
+    int v1,v2;
+    v1=sq(a);
+    v2=cube(a);
+    cout<<v1<<endl<<v2;
+
+	return 0;
+}
