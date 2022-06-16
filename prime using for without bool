@@ -9,11 +9,11 @@ int main() {
     
     for(i=1;i<=sqrt(n);i++){
         if(n%i==0) {
-            cout<<"No is not prime";
+            cout<<"Not prime";
             exit(0);
         }
     }
-    cout<<"No is prime";
+    cout<<"Prime";
 
 	return 0;
 }
