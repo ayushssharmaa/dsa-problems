@@ -1,0 +1,22 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+int main() {
+
+	int a,b,c,x,r1,r2;
+	cin>>a>>b>>c;
+
+	x= b*b - 4*a*c;
+	if(x<0){
+		cout<<"Imaginary";
+	}
+	else if(x>=0){
+		r1= (-b + sqrt(x))/2*a;
+		r2= (-b - sqrt(x))/2*a;
+		if(r1!=r2) cout<<"Real and Distinct"<<endl<<min(r1, r2)<<" "<<max(r1, r2);
+		else if(r1==r2) cout<<"Real and Equal"<<endl<<r2<<" "<<r1;
+	}
+	
+
+	return 0;
+}
