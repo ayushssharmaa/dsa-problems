@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int i,j,k,l,n,a=-2,b;
+    cin>>n;
+    int count;
+    
+    for(i=1;i<=n;i++){
+        for(j=n;j>i;j--) cout<<"  ";
+        count=i;
+        for(j=1;j<=i;j++) {
+            cout<<count<<" ";
+            count++;
+        }
+        a= a+2;
+        b=a;
+        for(l=1;l<i;l++) {
+            cout<<b<<" ";b--;
+        }
+        cout<<endl;
+    }
+
+	return 0;
+}
