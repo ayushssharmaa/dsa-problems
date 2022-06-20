@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int N1,N2,c,min;
+    cin>>N1>>N2;
+    
+    if(N1<N2) min=N1;
+    else min=N2;
+    
+    for(int i=1;i<min;i++){
+        if(N1%i==0 && N2%i==0) c=i;
+    }
+    cout<<c;
+
+	return 0;
+}
