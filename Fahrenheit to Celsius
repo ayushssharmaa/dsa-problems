@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+
+    int a,b,c,i,ans;
+    cin>>a>>b>>c;
+    
+    for(i=a;i<=b;i+=c){
+        ans=5*(i-32)/9;
+        cout<<i<<" "<<ans<<"\n";
+    }
+
+	return 0;
+}
