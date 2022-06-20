@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int N1,N2,c,i;
+    cin>>N1>>N2;
+    
+    c=N1*N2;
+    for(i=1;i<=c;i++)
+    {
+        if(i%N1==0 && i%N2==0) break;
+    }
+    cout<<i;
+
+	return 0;
+}
