@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int delhi(int a){
+    int r,s1=0,s2=0;
+    while(a>0){
+        r = a%10;
+        if(r%2==0){
+            s1+=r;
+        }
+        else{
+            s2+=r;
+        }
+        a/=10;
+    }
+    if(s1%4==0 || s2%3==0){
+        cout<<"Yes"<<endl;
+    }
+    else{
+        cout<<"No"<<endl;
+    }
+}
+int main(){
+    int n;
+    cin>>n;
+    while(n--){
+        int a;
+        cin>>a;
+        delhi(a);
+    }
+}
