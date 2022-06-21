@@ -1,0 +1,28 @@
+#include <iostream>
+#include<cmath>
+using namespace std;
+
+int sum(int n){
+    int r,i=0,sum1=0;
+    while(n>0){
+        r=n%10;
+        if(r==0) r=5;
+        sum1+=r*pow(10,i);
+        i++;
+        n/=10;
+    }
+    return sum1;
+}
+
+int main() {
+
+    int n,v;
+    cin>>n;
+    if(n>0) cout<<sum(n)<<"\n";
+    else if(n==0) cout<<5<<"\n";
+    else if(n<0) {
+        n=n*-1;
+        cout<<-1*sum(n)<<"\n";
+    }
+	return 0;
+}
