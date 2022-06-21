@@ -1,0 +1,38 @@
+        #include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+void shop(int t){
+    while(t--){
+        int i=0;
+        int m,n;
+        cin>>m>>n;
+        while(true){
+            if(i%2==0){
+                m-=(i+1);
+                if(m<0){
+                    cout<<"Harshit"<<"\n";
+                    break;
+                }
+            }
+            else{
+                n-=(i+1);
+                if(n<0){
+                    cout<<"Aayush"<<"\n";
+                    break;
+                }
+            }
+            i++;
+        }
+    }
+}
+
+int main() {
+    
+    int t;
+    cin>>t;
+    
+    shop(t);
+
+	return 0;
+}
