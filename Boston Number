@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+long long sum(long long n){
+    long long r,s=0;
+    while(n>0){
+        r=n%10;
+        s+=r;
+        n/=10;
+    }
+    return s;
+}
+    
+long long boston(long long n){
+    long long i=2,a=0;
+    long long val;
+    while(n>1){
+        if(n%i==0){
+            a+=i;
+            n/=i;
+        }
+        else i++;
+    }
+    val=sum(a);
+    return val;
+
+}
+int main() {
+    
+    long long n,a,b;
+    cin>>n;
+    
+    a=sum(n);
+    b=boston(n);
+    
+    if(a==b) cout<<1;
+    else cout<<0;
+    
+	return 0;
+}
