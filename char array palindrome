@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+#include<cmath>
+using namespace std;
+int main(){
+    char a[100];
+    cin.getline(a,100);
+    int i=0,j=strlen(a)-1,ans=0;
+    while(i<j){
+        if(a[i]!=a[j]){
+            ans=1;
+            break;
+        }
+        i++;j--;
+    }
+    if(ans==1){
+        cout<<"no";
+    }
+    else{
+        cout<<"yess";
+    }
+}
