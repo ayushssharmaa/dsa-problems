@@ -1,0 +1,31 @@
+
+                        // FREQUENCY
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+
+    char a[100];
+    cin>>a;
+    int f[26]={0};
+    char ch;
+    int index;
+    int i;
+    
+    for(i=0;a[i]!='\0';i++){
+        ch=a[i];
+        index=ch-'a';
+        f[index]++;
+    }
+    char x;
+    for(i=0;i<26;i++){
+        if(f[i]>0){
+           x=i+'a';
+           cout<<"character "<<x<<"-->"<<f[i]<<endl;
+        }
+    }
+    
+	return 0;
+}
