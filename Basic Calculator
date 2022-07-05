@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    char c;
+    cin>>c;
+    int a,b,ans;
+    
+    while(1){
+        if(c=='X'||c=='x'){
+		    break;
+        }
+        if(c=='+'){
+            cin>>a>>b;
+            ans=a+b;
+            cout<<ans<<endl;
+        }
+        else if(c=='-'){
+            cin>>a>>b;
+            ans=a-b;
+            cout<<ans<<endl;
+        }
+        else if(c=='*'){
+            cin>>a>>b;
+            ans=a*b;
+            cout<<ans<<endl;
+        }
+        else if(c=='/'){
+            cin>>a>>b;
+            ans=a/b;
+            cout<<ans<<endl;
+        }
+        else if(c=='%'){
+            cin>>a>>b;
+            ans=a%b;
+            cout<<ans<<endl;
+        }
+        else cout<<"Invald operation. Try again.";
+        cin>>c;
+    }
+
+	return 0;
+}
