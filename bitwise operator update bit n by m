@@ -1,0 +1,20 @@
+
+            // bitwise operator update bit n by m
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    int n,i,j,m;
+    cin>>n>>m>>i>>j;
+    int ma=(~0) , mb=0, mask;
+    ma = (ma << j);
+    mb = pow(2,i)-1 ;
+    mask = (ma | mb);
+    n = (n & mask);
+    m = (m << (i-1));
+    cout<<(n|m)<<endl;
+
+	return 0;
+}
