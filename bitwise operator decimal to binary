@@ -1,0 +1,19 @@
+
+       // bitwise operator decimal to binary
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int n;
+    cin>>n;
+    int r;
+    while(n>0){
+        r=n%2;
+        cout<<r;
+        n/=2;
+    }
+
+	return 0;
+}
