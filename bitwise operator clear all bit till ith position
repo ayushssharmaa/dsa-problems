@@ -1,0 +1,17 @@
+
+                // bitwise operator clear all bit till ith position
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n,i;
+    cin>>n>>i;
+    int mask=(~0);
+    mask = (mask << i);
+    n = (n & mask);
+    cout<<n<<endl;
+
+	return 0;
+}
