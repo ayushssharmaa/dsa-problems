@@ -1,0 +1,19 @@
+
+        // EVEN OR ODD USING BITWISE OPERATORS
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int lsb,n;
+    cin>>n;
+    if(lsb=(n&1)==0 ? 0:1){
+        cout<<n<<" is odd."<<endl;
+    }
+    else{
+        cout<<n<<" is even."<<endl;
+    }
+    
+	return 0;
+}
