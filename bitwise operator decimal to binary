@@ -8,12 +8,14 @@ int main() {
     
     int n;
     cin>>n;
-    int r;
+    int r,p=1,ans=0;
     while(n>0){
         r=n%2;
-        cout<<r;
+        ans+=r*p;
+        p*=10;
         n/=2;
     }
+    cout<<ans<<endl;
 
 	return 0;
 }
