@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    int t;
+    cin>>t;
+    int i,j;
+    while(t--){
+        int m=INT_MAX,d,n1,n2;
+        int n;
+        cin>>n;
+        int a[n];
+        for(i=0;i<n;i++) cin>>a[i];
+        int target;
+        cin>>target;
+        for(i=0;i<n;i++){
+            for(j=i+1;j<n;j++){
+                if(a[i]+a[j]==target){
+                    d = abs(a[i]-a[j]);
+                    if(m>=d){
+                        m=d;
+                        n1=a[i];
+                        n2=a[j];
+                    }
+                }
+            }
+        }
+        cout<<"Deepak should buy roses whose prices are "<<min(n1,n2)<<" and "<<max(n1,n2)<<"."<<endl;
+    }
+
+	return 0;
+}
