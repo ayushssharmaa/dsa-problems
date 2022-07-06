@@ -1,0 +1,18 @@
+
+        // bitwise operator set ith bit 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n,i;
+    cin>>n>>i;
+    cout<<"After seting the "<<i<<"th bit the number is ";
+    int mask;
+    mask=(1<<i);
+    n = (n|mask);
+    cout<<n;
+    
+	return 0;
+}
