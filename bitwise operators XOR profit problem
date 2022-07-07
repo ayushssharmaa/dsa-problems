@@ -1,0 +1,25 @@
+
+         // bitwise operators XOR profit problem
+                
+#include <iostream>
+#include <climits>
+using namespace std;
+
+int main() {
+	
+	int a,b;
+	cin>>a>>b;
+	int i,j,ans=0;
+	int m= INT_MIN;
+	for(i=a;i<=b;i++){
+	    for(j=i;j<=b;j++){
+	        int x=i;
+	        int y=j;
+	        ans= (x^y);
+	        m=max(m,ans);
+	    }
+	}
+	cout<<m<<endl;
+	
+	return 0;
+}
