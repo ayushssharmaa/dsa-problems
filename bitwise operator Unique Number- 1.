@@ -1,0 +1,35 @@
+
+            // bitwise operator Unique Number- 1.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int n;
+    cin>>n;
+    int a[n];
+    int i;
+    for(i=0;i<n;i++) cin>>a[i];
+    
+    int ans=0;
+    for(i=0;i<n;i++) ans^=a[i];
+    
+    int pos=0;
+    while(ans>0){
+        if((ans & 1) > 0) break;
+        pos++;
+        ans = ans>>1;
+    }
+    
+    int un1=0;
+    for(i=0;i<n;i++){
+        if((a[i] & pos)==0){
+            un1 ^= a[i];
+        }
+    }
+    
+    cout<<un1<<endl;
+
+	return 0;
+}
