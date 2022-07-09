@@ -1,0 +1,29 @@
+
+        // recursion array first occurence
+            
+#include <iostream>
+using namespace std;
+
+int fo(int *a, int n, int key){
+    // base condition
+    if(n==0) return -1;
+    
+    // recursive case
+    if(a[0]==key) return 0;
+    int i= fo(a+1, n-1, key);
+    if(i==-1) return -1;  // key is not found
+    return i+1;
+    
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    int i;
+    int a[n];
+    for(i=0;i<n;i++) cin>>a[i];
+    int key;
+    cin>>key;
+    cout<<fo(a,n,key);
+}
