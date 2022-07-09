@@ -1,0 +1,25 @@
+
+        // recursion print increasing numbers using iterator i
+            
+#include <iostream>
+using namespace std;
+
+void inc(int i, int n){
+    // base condition
+    if(i==n+1){
+        return;    
+    }
+    
+    // recursive case 
+    cout<<i<<" ";
+    inc(i+1,n);
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    inc(1,n);
+
+	return 0;
+}
