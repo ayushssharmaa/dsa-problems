@@ -1,0 +1,25 @@
+
+            // recursion prin decreasing numbers
+            
+#include <iostream>
+using namespace std;
+
+int dec(int n){
+    // base condition
+    if(n==0){
+        exit(0);    
+    }
+    
+    // recursive case 
+    cout<<n<<" ";
+    dec(n-1);
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    dec(n);
+
+	return 0;
+}
