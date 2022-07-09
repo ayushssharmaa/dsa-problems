@@ -1,0 +1,27 @@
+
+            // recursion nth fib no
+
+#include <iostream>
+using namespace std;
+
+int fib(int n){
+    // base condition
+    if(n==0 || n==1) return n;
+    
+    // recursive case ie. fib(n)=fib(n-1)+fib(n-2)
+    int smallans1 = fib(n-1);    
+    int smallans2 = fib(n-2);
+    
+    // find the solution
+    int bigans = smallans1 + smallans2;
+    return bigans;
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    cout<<fib(n)<<endl;
+
+	return 0;
+}
