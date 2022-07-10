@@ -1,0 +1,26 @@
+
+        // recursion Integer to String
+            
+#include <bits/stdc++.h>
+using namespace std;
+
+string a[]={
+    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
+};
+
+void IntegerToString(int n){
+    // base case
+    if(n==0) return;
+    
+    // recursive case
+    int digit=n%10;
+    IntegerToString(n/10);
+    cout<<a[digit]<<" ";
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    IntegerToString(n);
+}
