@@ -1,0 +1,26 @@
+
+            // recursion pattern question
+
+#include <iostream>
+using namespace std;
+
+void pattern(int n, int i){
+    // base condition 
+    if(i==n) return;
+
+    // recursive condition
+    for(int j=0; j<=i; j++){
+        cout<<"*"<<" ";
+    }
+    cout<<endl;
+    pattern(n,i+1);
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    int i=0;
+    pattern(n,i);
+
+}
