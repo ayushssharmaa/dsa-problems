@@ -1,0 +1,28 @@
+
+        // recursion array all indices using itorator i
+            
+#include <iostream>
+using namespace std;
+
+void lo(int *a, int n, int i, int key){
+    // base condition
+    if(i==n) return;
+    
+    // recursive case
+    if(a[i]==key){
+        cout<<i<<" ";
+    }
+    lo(a,n,i+1,key);
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    int i=0;
+    int a[n];
+    for(int j=0;j<n;j++) cin>>a[j];
+    int key;
+    cin>>key;
+    lo(a,n,i,key);
+}
