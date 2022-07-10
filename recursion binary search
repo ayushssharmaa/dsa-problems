@@ -1,0 +1,33 @@
+
+        // recursion binary search
+            
+#include <bits/stdc++.h>
+using namespace std;
+
+int binary(int *a, int s, int e, int key){
+    // base case
+    if(s>e) return -1;
+    
+    // recursive case
+    int m=(s+e)/2;
+    if(a[m]==key) return m;
+    else if(key>a[m]){
+        return binary(a,m+1,e,key);
+    }
+    else {
+        return binary(a,s,e-1,key);
+    }
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    int a[n];
+    for(int j=0;j<n;j++) cin>>a[j];
+    sort(a,a+n);
+    int s=0, e=n-1;
+    int key;
+    cin>>key;
+    cout<<binary(a,s,e,key);
+}
