@@ -1,0 +1,24 @@
+
+        // recursion n power of a number
+            
+#include <iostream>
+using namespace std;
+
+int power(int a, int n){
+    // base case
+    if(n==0) return 1;
+    
+    // recursive case
+    int s=power(a,n-1);
+    int b=a*s;
+    return b;
+}
+
+int main() {
+
+    int a;
+    cin>>a;
+    int n;
+    cin>>n;
+    cout<<power(a,n)<<endl;
+}
