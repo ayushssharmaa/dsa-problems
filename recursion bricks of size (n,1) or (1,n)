@@ -1,0 +1,19 @@
+
+        // recursion bricks of size (n,1) or (1,n)
+            
+#include <bits/stdc++.h>
+using namespace std;
+
+int bricks(int n){
+    // base case
+    if(n<=3) return 1;
+    // recursive case
+    return bricks(n-1) + bricks(n-4); 
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    cout<<bricks(n);
+}
