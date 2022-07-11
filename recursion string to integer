@@ -1,0 +1,25 @@
+
+        // recursion string to integer
+            
+#include <bits/stdc++.h>
+using namespace std;
+
+int StringToInteger(char *a, int n){
+    // base codition
+    if(n==0) return 0;
+    
+    // recurive case
+    int digit = a[n-1] - '0';
+    int small=StringToInteger(a,n-1);
+    int big = small * 10 + digit;
+    return big;
+}
+
+int main() {
+
+    char a[100];
+    cin.getline(a,100);
+    int n=strlen(a);
+    int ans=StringToInteger(a,n);
+    cout<<ans<<endl;
+}
