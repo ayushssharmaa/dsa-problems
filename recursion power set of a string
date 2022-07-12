@@ -1,0 +1,29 @@
+
+        // recursion power set of a string
+            
+#include <bits/stdc++.h>
+using namespace std;
+
+void powerset(char *in, char *out, int i, int j){
+    // base case
+    if(in[i]=='\0'){
+        out[j]='\0';
+        cout<<out<<endl;
+        return;
+    }
+    
+    // recursive case
+    // 1. j will remain same ansd i will increase by 1
+    powerset(in, out, i+1, j);
+    // 2. both i and j will increase by 1
+    out[j]=in[i];
+    powerset(in, out, i+1, j+1);
+}
+
+int main() {
+
+    char in[]= "abc";
+    char out[100];
+    int i=0, j=0;
+    powerset(in,out,i,j);
+}
