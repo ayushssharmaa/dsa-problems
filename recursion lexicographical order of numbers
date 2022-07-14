@@ -1,0 +1,23 @@
+
+            // recursion lexicographical order of numbers
+
+#include<bits/stdc++.h>
+using namespace std;
+void lex(int n, int a)
+{
+    //base case
+    if(a > n) return;
+    cout << a << " ";
+    
+    //rec case
+    int i =0;
+    if (a==0)
+        i = 1;
+    for(; i<=9; i++)
+        lex(n, a*10 + i);
+}
+int main(){
+    int n;
+    cin>>n;
+    lex(n,0);
+}
