@@ -1,0 +1,24 @@
+
+            // recursion print size of a number 
+
+#include <iostream>
+using namespace std;
+
+int count=0;
+
+void f(int n){
+    if(n==0) return;
+    
+    count++;
+    f(n/10);
+}
+
+int main() {
+    
+    int n;
+    cin>>n;
+    f(n);
+    cout<<count;
+    
+	return 0;
+}
