@@ -1,0 +1,23 @@
+
+            // recursion GCD.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int f(int a, int b){
+    while(a!=b){
+        if(a>b) return f(a-b,b);
+        else return f(a,b-a);
+    }
+    return a;
+}
+
+int main() {
+
+    int a, b;
+    cin>>a>>b;
+    
+    cout<<f(a,b);
+
+	return 0;
+}
