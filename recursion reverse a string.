@@ -1,0 +1,25 @@
+
+            // recursion reverse a string.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+void f(char *a, char *b, int n, int i){
+    // base case
+    if(i==n) return;
+    // rec case
+    b[i]=a[n-i-1];
+    f(a,b,n,i+1);
+}
+
+int main() {
+
+    char a[100], b[100];
+    cin>>a;
+    int n=strlen(a);
+    int i=0;
+    f(a,b,n,i);
+    cout<<b;
+
+	return 0;
+}
