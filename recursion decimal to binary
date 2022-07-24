@@ -1,0 +1,21 @@
+
+            // recursion decimal to binary
+
+#include <iostream>
+using namespace std;
+
+void f(int n){
+    //base case
+    if(n<=0) return;
+    //rec case
+    f(n/2);
+    cout<<n%2;
+}
+
+int main() {
+
+    int n;
+    cin>>n;
+    f(n);
+    
+}
