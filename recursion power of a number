@@ -1,0 +1,20 @@
+
+        // recursion power of a number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int f(int n, int p){
+    //base case
+    if(p==0) return 1;
+    //rec case
+    int s=n*f(n,p-1);
+    return s;
+}
+
+int main() {
+
+    int n,p;
+    cin>>n>>p;
+    cout<<f(n,p);
+}
