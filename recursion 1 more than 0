@@ -1,0 +1,30 @@
+
+        // recursion 1 more than 0
+
+#include <iostream>
+using namespace std;
+void f(char *a, int n, int i, int x, int y){
+    //base case
+    if(i==n) {
+        cout<<a<<endl;
+        return;
+    }
+    //rec case
+    a[i]='1';
+    f(a,n,i+1,x+1,y);
+    if(x>y) {
+        a[i]='0';
+        f(a,n,i+1,x,y+1);
+    }
+
+}
+int main() {
+
+    int n;
+    cin>>n;
+    char a[n];
+    int i=1;
+    int x=1,y=0;
+    a[0]='1';
+    f(a,n,i,x,y);
+}
