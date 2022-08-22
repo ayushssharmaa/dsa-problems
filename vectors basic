@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+#include<vector>
+using namespace std;
+
+int main() {
+
+    // how to initialise a vector 
+    vector<int> a;
+    vector<int> b(5,10);
+    vector<int> c(b.begin(),b.end());
+    vector<int> d{1,2,3,4,5};
+    
+    // how to iterate over a vector 
+    for(int i=0;i<c.size();i++){
+        cout<<c[i]<<", ";
+    }
+    cout<<endl;
+    
+    for(auto it=b.begin(); it!=b.end();it++){
+        cout<< (*it)<<", ";
+    }
+    cout<<endl;
+    
+    // for each loop
+    for(int x:d){
+        cout<<x<<", ";
+    }
+    cout<<endl;
+    
+    // more functions on vectors 
+    
+    vector<int> v;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int no;
+        cin>>no;
+        v.push_back(no);  // add number to the end of the vectors 
+    }
+    for(int x:v){
+        cout<<x<<", ";
+    }
+    cout<<endl;
+    
+    // understand at memory level, the difference between the two vectors v and d 
+    cout<<v.size()<<endl;  // size of array
+    cout<<v.capacity()<<endl; // size of underling array
+    cout<<v.max_size()<<endl; // max no of elements a vector can hold in the worst case acc to the avalable memory in the system
+    
+    // understand at memory level, the difference between the two vectors v and d 
+    cout<<d.size()<<endl;  // size of array
+    cout<<d.capacity()<<endl; // size of underling array
+    cout<<d.max_size()<<endl; // max no of elements a vector can hold in the worst case acc to the avalable memory in the system
+
+    
+    
+	return 0;
+}
