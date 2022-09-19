@@ -1,3 +1,7 @@
+
+// o(n^2) time
+// o(n) space
+
 #include<bits/stdc++.h>
 using namespace std;
 
