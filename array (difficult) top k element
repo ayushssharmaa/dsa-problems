@@ -1,0 +1,20 @@
+class Solution {
+public:
+    vector<int> topKFrequent(vector<int>& v, int k) {
+        int n = v.size();
+        int i;
+        
+        unordered_map<int, int> m;
+        for(i=0;i<n;i++) m[v[i]]++;
+        
+        vector<vector<int>> v2(n+1);
+        for(auto it: m) v2[it.second].push_back(it.first);
+        
+        vector<int> ans;
+        for(i=n;i>0;i--){
+            if(ans.size() >= k) break;
+            if(!v2[i].empty()) ans.insert(ans.end(), v2[i].begin(), v2[i].end());
+        }
+        return ans;
+    }
+};
