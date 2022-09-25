@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int trap(vector<int>& v) {
+        int n=v.size(), x=0;
+        int pre[n], post[n];
+        int ans=0;
+        pre[0]=v[0];
+        for(int i=1;i<n;i++) pre[i]= max(v[i],pre[i-1]);
+        
+        post[n-1]=v[n-1];
+        for(int i=n-2;i>=0;i--) post[i]= max(v[i],post[i+1]);
+        
+        for(int i=0;i<n;i++){
+            x= min(pre[i],post[i]) - v[i];
+            ans+=x;
+        }
+        return ans;
+    }
+};
